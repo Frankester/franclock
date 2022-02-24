@@ -1,38 +1,66 @@
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Clock Page */
+
+.flags {
+    margin: 0 auto;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flags > * {
+    list-style: none;
+    padding:0;
+    margin:10px 0;
+    font-size: 2em;
+}     
+
+/* Alarms Page */
+.disabled {
+    color:rgba(0, 0, 0, 30%)!important
+}
+.enabled small{
+    color: grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 768px) {
+    header {
+        margin-bottom: 50px;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Chornometer */
+
+.not-visible {
+    display: none;
 }
+.visible{
+    display: block;
+}
+
+.adjust {
+    width: 100%;
+    display: block;
+}
+
+small.leyend{
+    font-size: 0.45em;
+}
+
+
+.drop-enter{
+    color: #f00;
+    border-color: #f00!important;
+}
+
+
